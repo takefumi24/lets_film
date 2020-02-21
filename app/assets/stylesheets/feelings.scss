@@ -1,0 +1,231 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.content-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  background-color: black;
+  color: white;
+
+
+  &__nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav h1 {
+   font-size: 30px;
+  }
+
+  &__nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav ul li {
+  margin-right: 50px;
+  }
+}
+
+.mainvisual {
+  position: relative;
+  height: 600px;
+}
+
+.mainvisual img {
+  width: 70%;
+  height: 500px;
+  object-fit: cover;
+}
+
+
+.greeting h2 {
+  text-align: center;
+}
+
+.greeting .contents {
+  width: 100%;
+}
+
+
+.greeting .content {
+  width: 48%;
+}
+
+.work {
+  width: 100%;
+  padding-top: 40px;
+  position: relative;
+}
+
+// .work::before {
+//   content: '';
+//   background: #e8e7e7;
+//   position: absolute;
+//   width: 100%;
+//   height: 300px;
+//   z-index: -1;
+// }
+
+
+
+
+
+
+
+
+.work h2 {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.work ul {
+  display: flex;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.work ul li {
+  width: 400px;
+}
+
+work ul li {
+  width: 400px;
+}
+
+.work ul li figure {
+  margin: 0;
+}
+
+.work ul li figure img {
+  height: 400px;
+  width: 400px;
+}
+
+
+
+.news .content-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 180px;
+}
+
+.news h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.news li {
+  border-bottom: dotted 1px #dedede;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.news li a {
+  color: #333333;
+}
+
+.news li a:hover {
+  opacity: 0.6;
+}
+
+.news li time {
+  font-size: 0.75em;
+  color: #949494;
+  padding-right: 0px;
+  margin-right: 80px;
+}
+
+.recruit-img::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.recruit {
+  position: relative;
+}
+
+.recruit-img img {
+  width: 80%;
+  height: 400px;
+  margin-right: 20%;
+  object-fit: cover;
+}
+
+.recruit-img::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.recruit h2 a {
+  position: absolute;
+  top: 45%;
+  right: 52%;
+  width: 250px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.6);
+  line-height: 60px;
+  text-align: center;
+}
+
+.bg2 {
+  position: absolute;
+  background: #e8e7e7;
+  height: 400px;
+  width: 45%;
+  top: -20%;
+  right: 0;
+  z-index: -1;
+}
+
+footer .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.address p {
+  line-height: 1.8;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  margin-right: 50px;
+}
+
+.copylight p {
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 0;
+  line-height: 100px;
+  color: #333;
+  background-color: #e8e7e7;
+}
