@@ -41,7 +41,6 @@
 
 %section.work
   .content-wrapper
-    　
     %h2 Feeling
     %ul
       %li
@@ -53,7 +52,9 @@
       %li
         %a{:href => "#"}
           %figure
-            %img{:src => "https://cdn.pixabay.com/photo/2016/04/24/05/52/heart-1348868_1280.png"}/
+            = link_to films_path do
+              %img{:src => "https://cdn.pixabay.com/photo/2016/04/24/05/52/heart-1348868_1280.png"}/
+
           %h3 タイトル
           %p 本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
       %li

@@ -1,3 +1,72 @@
 // Place all the styles related to the films controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.wrapper{
+  // height: 100vh;
+  // width: 100vw;
+
+  .japanese {
+    width: 100%;
+    height: 100%;
+
+
+    &__films {
+      display: flex;
+      margin: 20px 0 0 20px ;
+      height:380px;
+
+      &__write {
+        font-size: 50px;
+        line-height: 350px;
+      }
+
+      &__pster {
+        display: flex;
+      }
+      &__poster img{
+        object-fit: cover;
+        margin-left: 50px;
+        width: 300px;
+      }
+
+      &__title__name{
+        font-size: 20px;
+      }
+    }
+  }
+
+  .western {
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+
+    &__films {
+      display: flex;
+      margin: 20px 0 0 20px ;
+      height:380px;
+
+      &__write {
+        font-size: 50px;
+        line-height: 350px;
+      }
+
+      &__pster {
+        display: flex;
+      }
+      &__poster img{
+        object-fit: cover;
+        margin-left: 50px;
+        width: 300px;
+      }
+
+      &__title__name{
+        font-size: 20px;
+      }
+    }
+  }
+}
