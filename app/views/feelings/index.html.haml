@@ -6,7 +6,9 @@
         %li
           %a{:href => "#"} マイページ
         %li
-          %a{:href => "#"} ログイン
+          = link_to new_user_session_path do
+            %a{:href => "#"} ログイン
+
         %li
           %a{:href => "#"} 投稿
         %li
