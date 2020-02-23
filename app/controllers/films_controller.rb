@@ -1,12 +1,11 @@
 class FilmsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  # before_action :move_to_index, except: [:index, :show]
 
   def index
     @films = Film.new
   end
 
   def show
-    # binding.pry
     @film = Film.find(params[:id])
   end
 
