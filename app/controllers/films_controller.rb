@@ -6,6 +6,7 @@ class FilmsController < ApplicationController
   end
 
   def show
+    # binding.pry
     @film = Film.find(params[:id])
   end
 
