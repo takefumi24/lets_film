@@ -7,8 +7,9 @@
         %ul.japanese__films__poster__list
           %li.japanese__films__poster-list__image
             %a{:href => "#"}
-              %img{:alt => "映画画像", :src => "https://i.pinimg.com/originals/98/a3/54/98a3546360ee6c3f492476a9cba345b7.jpg"}/
-              %img{:alt => "映画画像", :src => "https://eiga.k-img.com/images/movie/34269/photo/5d88638e1e7175d6.jpg?1495095132"}/
+              =link_to films_path(@film) do
+                %img{:alt => "映画画像", :src => "https://i.pinimg.com/originals/98/a3/54/98a3546360ee6c3f492476a9cba345b7.jpg"}/
+                -# %img{:alt => "映画画像", :src => "https://eiga.k-img.com/images/movie/34269/photo/5d88638e1e7175d6.jpg?1495095132"}/
       .japanese__films__title
         %h2.japanese__films__title__name
           ただ君を愛している
