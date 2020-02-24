@@ -1,0 +1,23 @@
+.wrapper-show
+  .side_left
+    .films
+    = link_to new_film_review_path(@film) do
+      レビューを投稿する
+      .films__poster
+        .films__poster__title
+          %img.films__poster__title{:src => @film.image}
+        %h.films__poster__title
+          ただ、君を愛している
+    .review
+      %h2 Review List
+      - @reviews.each do |r|
+        %ul
+          %li
+            %a{:href => "#"}
+              %time
+                = r.created_at
+              %name
+                = r.user.name
+              %text
+                = r.text
+  .side_right

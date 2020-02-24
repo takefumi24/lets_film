@@ -1,0 +1,142 @@
+// Place all the styles related to the films controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.wrapper{
+  // height: 100vh;
+  // width: 100vw;
+
+  .japanese {
+    width: 100%;
+    height: 100%;
+
+
+    &__films {
+      display: flex;
+      margin: 20px 0 0 20px ;
+      height:380px;
+
+      &__write {
+        font-size: 50px;
+        line-height: 350px;
+      }
+
+      &__pster {
+        display: flex;
+      }
+      &__poster img{
+        object-fit: cover;
+        margin-left: 50px;
+        width: 300px;
+      }
+
+      &__title__name{
+        font-size: 20px;
+      }
+    }
+  }
+
+  .western {
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+
+    &__films {
+      display: flex;
+      margin: 20px 0 0 20px ;
+      height:380px;
+
+      &__write {
+        font-size: 50px;
+        line-height: 350px;
+      }
+
+      &__pster {
+        display: flex;
+      }
+      &__poster img{
+        object-fit: cover;
+        margin-left: 50px;
+        width: 300px;
+      }
+
+      &__title__name{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.wrapper-show {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.side_left {
+  width: 50%;
+}
+
+.side_right {
+  width: 50%;
+}
+
+.films {
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.films__poster {
+  margin-left: 30px;
+}
+
+.films__poster h {
+  margin-left: 40px;
+  width: 454px;
+  font-size: 20px;
+}
+
+
+
+.review {
+  width: 700px;
+  margin-top: 100px;
+}
+
+.review h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.review li {
+  border-bottom: dotted 1px #dedede;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.review li a {
+  color: #333333;
+}
+
+.review li a:hover {
+  opacity: 0.6;
+}
+
+.review li name {
+  font-size: 0.75em;
+  color: #949494;
+  padding-right: 0px;
+  margin-right: 20px;
+}
+
+.review li time {
+  font-size: 0.75em;
+  color: #949494;
+  padding-right: 0px;
+  margin-right: 20px;
+}
