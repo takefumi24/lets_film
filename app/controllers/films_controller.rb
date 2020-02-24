@@ -1,12 +1,13 @@
 class FilmsController < ApplicationController
-  # before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
-    @films = Film.new
+    @films = Film.all
   end
 
   def show
     @film = Film.find(params[:id])
+    @reviews = Review.all
   end
 
   def move_to_index

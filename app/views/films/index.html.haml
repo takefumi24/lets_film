@@ -4,9 +4,10 @@
       %h1.japanese__films__write
         邦画
       .japanese__films__poster
-        %ul.japanese__films__poster__list
-          %li.japanese__films__poster-list__image
-            =link_to image_tag("https://i.pinimg.com/originals/98/a3/54/98a3546360ee6c3f492476a9cba345b7.jpg", class: "image"), film_path(@film)
+        - @films.each do |film|
+          %ul.japanese__films__poster__list
+            %li.japanese__films__poster-list__image
+              =link_to image_tag("https://i.pinimg.com/originals/98/a3/54/98a3546360ee6c3f492476a9cba345b7.jpg", class: "image"), film_path(film)
       .japanese__films__title
         %h2.japanese__films__title__name
           ただ君を愛している

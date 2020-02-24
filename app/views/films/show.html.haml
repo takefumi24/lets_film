@@ -1,28 +1,21 @@
-.films
-  .films__poster
-    %h.films__poster__title
-      ただ君を愛している
-
-.review
-  %h2 review note
-  %ul
-    %li
-      %a{:href => "#"}
-        %time> 2020-00-00
-        %name>ダン
-        恋したくなった
-    %li
-      %a{:href => "#"}
-        %time> 2020-00-00
-        %name>ダン
-        感動した
-    %li
-      %a{:href => "#"}
-        %time> 2020-00-00
-        %name>ダン
-        最高に楽しめた
-    %li
-      %a{:href => "#"}
-        %time> 2020-00-00
-        %name>ダン
-        良い感じ
+.wrapper-show
+  .side_left
+    .films
+      .films__poster
+        .films__poster__title
+          %img.films__poster__title{:src => @film.image}
+        %h.films__poster__title
+          ただ、君を愛している
+    .review
+      %h2 Review List
+      - @reviews.each do |r|
+        %ul
+          %li
+            %a{:href => "#"}
+              %time
+                = r.created_at
+              %name
+                = r.user.name
+              %text
+                = r.text
+  .side_right
