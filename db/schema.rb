@@ -41,14 +41,11 @@ ActiveRecord::Schema.define(version: 2020_02_23_113323) do
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "text"
-    t.bigint "user_id"
-    t.bigint "feeling_id"
-    t.bigint "film_id"
+    t.integer "user_id"
+    t.integer "feeling_id"
+    t.integer "film_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["feeling_id"], name: "index_reviews_on_feeling_id"
-    t.index ["film_id"], name: "index_reviews_on_film_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -1,6 +1,8 @@
 .wrapper-show
   .side_left
     .films
+    = link_to new_film_review_path(@film) do
+      レビューを投稿する
       .films__poster
         .films__poster__title
           %img.films__poster__title{:src => @film.image}
