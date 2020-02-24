@@ -70,3 +70,41 @@ a {
     }
   }
 }
+
+.review {
+  width: 700px;
+  margin-top: 400px;
+}
+
+.review h2 {
+  margin-bottom: 50px;
+
+}
+
+.review li {
+  border-bottom: dotted 1px #dedede;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.review li a {
+  color: #333333;
+}
+
+.review li a:hover {
+  opacity: 0.6;
+}
+
+.review li name {
+  font-size: 0.75em;
+  color: #949494;
+  padding-right: 0px;
+  margin-right: 20px;
+}
+
+.review li time {
+  font-size: 0.75em;
+  color: #949494;
+  padding-right: 0px;
+  margin-right: 20px;
+}
