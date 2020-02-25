@@ -2,8 +2,8 @@
   .content__title
     新規レビューの作成
     = form_with model: [@film ,@review], class: :form, local: true do |form|
-      .form__feeling
-        = form.select :feeling_id, Feeling.all.map{|f| [f.kind, f.id]}
+      .form__review
+        = form.select :feeling_id, Feeling.all.map{|f| [f.kind, f.id]}, class: :form_feeling
       = form.text_field :film_id, placeholder: @film.title, class: :form__title, value: @film.id
       = form.text_area :text, placeholder: :レビュー本文, class: :form__text
       = form.submit '投稿する', class: :form__btn

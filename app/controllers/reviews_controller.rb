@@ -10,7 +10,6 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.create(review_params)
-    @review.save
     redirect_to root_path
   end
 
