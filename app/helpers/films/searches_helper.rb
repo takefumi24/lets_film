@@ -1,0 +1,2 @@
+module Films::SearchesHelper
+end
