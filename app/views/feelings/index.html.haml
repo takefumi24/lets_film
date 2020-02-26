@@ -26,6 +26,9 @@
 
 
 .mainvisual
+  = form_with(url: films_searches_path, local: true, method: :get, class: "search-form") do |form|
+    = form.text_field :keyword, placeholder: "映画を検索する", class: "search-input"
+    = form.submit "検索", class: "search-btn"
   %img{:alt => "映画画像", :src => "https://cdn.pixabay.com/photo/2017/07/13/23/11/cinema-2502213_1280.jpg"}/
 
 %section.greeting
