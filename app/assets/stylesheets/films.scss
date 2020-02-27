@@ -14,7 +14,6 @@ a {
     width: 100%;
     height: 100%;
 
-
     &__films {
       display: flex;
       margin: 20px 0 0 20px ;
@@ -25,17 +24,21 @@ a {
         line-height: 350px;
       }
 
-      &__pster {
+      &__poster {
         display: flex;
+          &__image {
+            display: flex;
+          }
       }
+
       &__poster img{
         object-fit: cover;
         margin-left: 50px;
         width: 300px;
       }
 
-      &__title__name{
-        font-size: 20px;
+      &__title{
+        text-align: center;
       }
     }
   }
