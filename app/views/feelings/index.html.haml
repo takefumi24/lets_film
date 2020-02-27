@@ -6,9 +6,11 @@
         %li
           %a{:href => "#"} Home
         %li
-          %a{:href => "#"} Movies
-        %li
-          =link_to "Post", "/films/#{}/reviews/new"
+        = link_to films_path do
+          Movies
+
+        -# %li
+        -#   =link_to "Post", "/films/#{}/reviews/new"
         %li
           %a{:href => "#"}Log in
         %li
@@ -50,23 +52,24 @@
   %h2 Feeling
   %ul
     %li
-      %a{:href => "#"}
+      %a{:href => "/films?feeling_id=3"}
         %figure
-          = link_to films_path do
-            %img{:src => "https://placehold.jp/400x400.png"}/
-        %h3　　　　　　　　　笑いたい
+          %img{:src => "https://image.shutterstock.com/image-photo/eye-girl-tear-600w-766403896.jpg"}/
+        %h3.feel
+          感動したい
     %li
-      %a{:href => "#"}
+      %a{:href => "/films?feeling_id=2"}
         %figure
-          = link_to films_path do
-            %img{:src => "https://cdn.pixabay.com/photo/2016/04/24/05/52/heart-1348868_1280.png"}/
-        %h3 　　　　　　　　　恋したい
+          %img{:src => "https://image.shutterstock.com/z/stock-vector-emoticon-laughing-and-wiping-tears-away-while-pointing-at-something-or-someone-with-his-other-hand-564985714.jpg"}/
+        %h3 　　　　　　　　笑いたい
     %li
-      %a{:href => "#"}
+      %a{:href => "/films?feeling_id=1"}
         %figure
-          %img{:src => "https://placehold.jp/400x400.png"}/
-        %h3 タイトル
-        %p 本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+          %img{:src => "https://cdn.pixabay.com/photo/2016/04/24/05/52/heart-1348868_1280.png"}/
+        %h3 恋したい
+
+
+
 
 
 -# %section.recruit

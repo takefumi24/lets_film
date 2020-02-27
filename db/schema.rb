@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_23_113323) do
+ActiveRecord::Schema.define(version: 2020_02_26_074730) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "text"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2020_02_23_113323) do
     t.text "kind"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "film_feelings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "film_id"
+    t.bigint "feeling_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["feeling_id"], name: "index_film_feelings_on_feeling_id"
+    t.index ["film_id"], name: "index_film_feelings_on_film_id"
   end
 
   create_table "films", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -62,4 +71,6 @@ ActiveRecord::Schema.define(version: 2020_02_23_113323) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "film_feelings", "feelings"
+  add_foreign_key "film_feelings", "films"
 end

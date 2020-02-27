@@ -2,7 +2,12 @@ class FilmsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @films = Film.all
+    # @films = Film.all
+    id = params[:feeling_id]
+    # @films = Film.where(feeling_id:id)
+    return @films = Film.all unless id
+    @films = Feeling.find(id).films
+
   end
 
   def show

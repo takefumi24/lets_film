@@ -6,11 +6,14 @@
       .japanese__films__poster
         - @films.each do |film|
           %ul.japanese__films__poster__list
-            %li.japanese__films__poster-list__image
-              =link_to image_tag("https://i.pinimg.com/originals/98/a3/54/98a3546360ee6c3f492476a9cba345b7.jpg", class: "image"), film_path(film)
-      .japanese__films__title
-        %h2.japanese__films__title__name
-          ただ君を愛している
+            %li.japanese__films__poster__list__image
+              =link_to film_path(film), class: "image" do
+                = image_tag film.image
+            %li.japanese__films__title
+              = film.title
+        -# .japanese__films__title
+        -#   %h2.japanese__films__title__name
+        -#     ただ君を愛している
 
   .western
     .western__films
