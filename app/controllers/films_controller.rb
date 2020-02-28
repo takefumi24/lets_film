@@ -10,9 +10,13 @@ class FilmsController < ApplicationController
 
   end
 
+  def new
+    @film = Film.new
+  end
+
   def show
     @film = Film.find(params[:id])
-    @reviews = Review.all
+    @reviews = @film.reviews
   end
 
   def move_to_index
