@@ -14,6 +14,11 @@ class FilmsController < ApplicationController
     @film = Film.new
   end
 
+  def create
+    Film.create(film_params)
+    redirect_to root_path
+  end
+
   def show
     @film = Film.find(params[:id])
     @reviews = @film.reviews
@@ -21,5 +26,9 @@ class FilmsController < ApplicationController
 
   def move_to_index
     redirect_to action: :index unless user_signed_in?
+  end
+  private
+  def film_params
+    params.require(:film).permit(:text,:title,:image).merge(user_id: current_user.id)
   end
 end

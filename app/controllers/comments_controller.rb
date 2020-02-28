@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   def index
     @film = Film.find(params[:film_id])
-    @reviews = Review.all
+    @reviews = @film.reviews
     @review = Review.find(params[:review_id])
     @comment = Comment.new
     @comments = @review.comments
