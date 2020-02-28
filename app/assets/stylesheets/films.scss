@@ -18,14 +18,14 @@ a {
       display: flex;
       margin: 20px 0 0 20px ;
       height:380px;
-
       &__write {
         font-size: 50px;
-        line-height: 350px;
+        // line-height: 350px;
+        // display: inline-block;
       }
-
       &__poster {
         display: flex;
+        &
           &__image {
             display: flex;
           }
@@ -39,6 +39,9 @@ a {
 
       &__title{
         text-align: center;
+        font-size: 27px;
+        padding-left: 60px;
+
       }
     }
   }
@@ -142,4 +145,44 @@ a {
   color: #949494;
   padding-right: 0px;
   margin-right: 20px;
+}
+
+
+.form__register {
+  margin: 0 auto;
+  &__radio {
+    display: block;
+    width: 20vh;
+    height: 10vh;
+    margin: 15px auto 0;
+  }
+  &__title {
+    display: block;
+    width: 40vh;
+    height: 5vh;
+    margin: 15px auto 0;
+  }
+
+  &__image {
+    display: block;
+    width: 50vw;
+    height: 30px;
+    margin: 15px auto 0;
+  }
+
+  &__text {
+    display: block;
+    width: 50vw;
+    height: 30px;
+    margin: 15px auto 0;
+  }
+  &__btn {
+    display: block;
+    width: 30vw;
+    margin: 30px auto 0;
+    height:30%;
+  }
+  &__btn:hover {
+    opacity: 0.6;
+  }
 }
