@@ -152,9 +152,6 @@ a {
   margin: 0 auto;
   &__radio {
     display: block;
-    width: 20vh;
-    height: 10vh;
-    margin: 15px auto 0;
   }
   &__title {
     display: block;
@@ -180,9 +177,16 @@ a {
     display: block;
     width: 30vw;
     margin: 30px auto 0;
-    height:30%;
+    height:30px;
+    text-decoration: none;
+    border-style: none;
+    background-color: bisque;
   }
   &__btn:hover {
     opacity: 0.6;
   }
+}
+
+.test{
+  display: flex;
 }
