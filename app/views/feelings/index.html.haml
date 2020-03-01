@@ -25,9 +25,6 @@
 
 
 .mainvisual
-  = form_with(url: films_searches_path, local: true, method: :get, class: "search-form") do |form|
-    = form.text_field :keyword, placeholder: "映画を検索する", class: "search-input"
-    = form.submit "検索", class: "search-btn"
   %img{:alt => "映画画像", :src => "https://cdn.pixabay.com/photo/2017/07/13/23/11/cinema-2502213_1280.jpg"}/
 
 %section.greeting
@@ -44,56 +41,41 @@
 
 
 
-%section.work
+%section.feel
   %h2 Feeling
   %ul
     %li
       %a{:href => "/films?feeling_id=1"}
         %figure
-          %img{:src => "https://cdn.pixabay.com/photo/2016/04/24/05/52/heart-1348868_1280.png"}/
+          %img{:src => "https://cdn.pixabay.com/photo/2017/05/25/12/50/young-couple-2343265__480.jpg"}/
         %h3.feel
           恋したい
     %li
       %a{:href => "/films?feeling_id=2"}
         %figure
-          %img{:src => "https://image.shutterstock.com/z/stock-vector-emoticon-laughing-and-wiping-tears-away-while-pointing-at-something-or-someone-with-his-other-hand-564985714.jpg"}/
+          %img{:src => "https://cdn.pixabay.com/photo/2015/10/16/17/15/person-991506__480.jpg"}/
         %h3 笑いたい
     %li
       %a{:href => "/films?feeling_id=3"}
         %figure
           %img{:src => "https://image.shutterstock.com/image-photo/eye-girl-tear-600w-766403896.jpg"}/
         %h3 感動したい
-
-
-
--# %section.recruit
--#   .recruit-img
--#     %img{:alt => "映画", :src => "https://cdn.pixabay.com/photo/2017/07/13/23/11/cinema-2502213_1280.jpg"}/
--#   %h2
--#     %a{:href => ""} 映画情報
--#   .bg2
--# %footer.footer
--# .content-wrapper
--#   .address
--#     %h2 XX株式会社
--#     %p
--#       〒000−0000
--#       %br/
--#       東京都××××××××××
--#       %br/
--#       TEL 01-2345-6789
--#       %br/
--#       FAX 01-2345-6789
--#   %ul
--#     %li
--#       %a{:href => "#"} トップページ
--#     %li
--#       %a{:href => "#"} 会社概要
--#     %li
--#       %a{:href => "#"} 事業内容
--#     %li
--#       %a{:href => "#"} 採用情報
--#     %li
--#       %a{:href => "#"} お問い合わせ
+  %ul
+    %li
+      %a{:href => "/films?feeling_id=4"}
+        %figure
+          %img{:src => "https://cdn.pixabay.com/photo/2017/08/04/18/51/horror-2581018__480.jpg"}/
+        %h3.feel
+          恐怖を感じたい
+    %li
+      %a{:href => "/films?feeling_id=5"}
+        %figure
+          %img{:src => "https://cdn.pixabay.com/photo/2016/08/02/16/40/rage-1564031__480.jpg"}/
+        %h3 勇気をもらいたい
+    %li
+      %a{:href => "/films?feeling_id=6"}
+        %figure
+          %img{:src => "https://cdn.pixabay.com/photo/2016/01/19/17/45/hiker-1149877__480.jpg"}/
+        %h3 冒険したい
 .copylight
   %p ©️ XXCo., Ltd. All Rights Reserved.
