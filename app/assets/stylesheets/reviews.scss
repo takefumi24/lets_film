@@ -1,6 +1,8 @@
 // Place all the styles related to the reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// レビュー投稿画面
 .content {
   height: 100vh;
   width: 100vw;
@@ -42,9 +44,18 @@
     display: block;
     width: 30vw;
     margin: 30px auto 0;
-    height:30%
+    text-decoration: none;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #e3ffc4;
   }
   &__btn:hover {
     opacity: 0.6;
+    cursor: pointer;
+     box-shadow: 5px 5px 10px 0px
   }
+}
+
+#review_feeling_id {
+  height: 50px;
 }

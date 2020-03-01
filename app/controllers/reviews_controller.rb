@@ -1,6 +1,15 @@
 class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
+    @A = Review.pluck(:film_id).group_by(&:itself).keys
+    @data = []
+    @A.each do |a|
+      @B = Review.where(film_id: a).pluck(:feeling_id).group_by(&:itself).values
+      @B.each do |b|
+        @data << b.count
+        return @data
+      end
+    end
   end
 
   def new
@@ -10,25 +19,33 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.create(review_params)
-    redirect_to root_path
+    redirect_to films_path
   end
 
   def destroy
-    review = review.find(params[:id])
+    review = Review.find(params[:id])
     review.destroy
+    redirect_to film_path
   end
 
   def edit
-    @review = review.find(params[:id])
+    @film = Film.find(params[:film_id])
+    @review = Review.find(params[:id])
   end
 
   def update
-    review = review.find(params[:id])
+    review = Review.find(params[:id])
     review.update(review_params)
+    redirect_to film_path
   end
 
   private
   def review_params
     params.require(:review).permit(:text, :feeling_id, :film_id).merge(user_id: current_user.id)
+  end
+
+  def feeling_count
+    @A = Review.pluck(:film_id)
+
   end
 end

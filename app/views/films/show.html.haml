@@ -1,13 +1,16 @@
 .wrapper-show
   .side_left
-    .films
-    = link_to new_film_review_path(@film) do
-      レビューを投稿する
-      .films__poster
-        .films__poster__title
-          %img.films__poster__title{:src => @film.image}
-        %h.films__poster__title
-          ただ、君を愛している
+    .films__show-header
+      = link_to "レビューを投稿する",new_film_review_path(@film)
+      .films__show-header__edit
+        = link_to "編集する",edit_film_review_path(@film)
+      .films__show-header__destroy
+        = link_to "削除する",film_review_path(@film)
+    .films__poster
+      .films__poster__title
+        %img.films__poster__title{:src => @film.image}
+      %h.films__poster__title
+
     .review
       %h2 Review List
       - @reviews.each do |r|

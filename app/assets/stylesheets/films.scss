@@ -3,20 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 a {
   text-decoration: none;
-  color: white;
+  // color: white;
 }
 
-.wrapper{
-  // height: 100vh;
-  // width: 100vw;
-
+.films-wrapper{
+  height: 100vh;
+  width: 100vw;
+  .films-header {
+    height: 5vh;
+  }
   .japanese {
     width: 100%;
-    height: 100%;
+    height: 40vh;
 
     &__films {
       display: flex;
-      margin: 20px 0 0 20px ;
       height:380px;
       &__write {
         font-size: 50px;
@@ -35,6 +36,9 @@ a {
         object-fit: cover;
         margin-left: 50px;
         width: 300px;
+        &:hover {
+          opacity: .7;
+        }
       }
 
       &__title{
@@ -45,6 +49,76 @@ a {
       }
     }
   }
+
+  .search-form {
+  text-align: center;
+  margin: 10px 0;
+  }
+  .search-input {
+    width: 30%;
+    margin-right: 10px;
+    height: 50px;
+  }
+  .search-btn {
+    width: 10%;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668AD8;
+    color: #FFF;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 5px #668AD8;
+    border: dashed 1px #FFF;
+  }
+  .search-btn:hover {
+    border: dotted 1px #FFF;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .western {
     width: 100%;
@@ -77,6 +151,7 @@ a {
   }
 }
 
+// filmのshowアクション
 .wrapper-show {
   height: 100%;
   width: 100%;
@@ -91,14 +166,26 @@ a {
   width: 50%;
 }
 
-.films {
-  margin-left: 30px;
-  margin-top: 50px;
+// .films {
+//   margin-left: 30px;
+//   margin-top: 50px;
+// }
+
+.films__show-header {
+  text-align: center;
 }
+
 
 .films__poster {
   margin-left: 30px;
+  margin-top: 40px;
+  &__title {
+    height: 400px;
+    height: 500px;
+  }
+
 }
+
 
 .films__poster h {
   margin-left: 40px;
@@ -147,11 +234,35 @@ a {
   margin-right: 20px;
 }
 
+// 映画登録フォーム
+.register {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://theriver.jp/wp-content/uploads/2017/07/jack-poc-1024x538.png);
+  background-size: cover;
+  object-fit: ceil($number: 0);
+  background-position: center;
+
+  &__form__name {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
+  }
+}
 
 .form__register {
+  text-align: center;
+}
+
+.form__register__row {
   margin: 0 auto;
+  margin-top: 60px;
   &__radio {
     display: block;
+    margin: 0 auto;
+    color: white;
   }
   &__title {
     display: block;
@@ -165,6 +276,7 @@ a {
     width: 50vw;
     height: 30px;
     margin: 15px auto 0;
+    margin-top: 40px;
   }
 
   &__text {
@@ -172,21 +284,37 @@ a {
     width: 50vw;
     height: 30px;
     margin: 15px auto 0;
+    margin-top: 40px;
   }
   &__btn {
     display: block;
     width: 30vw;
     margin: 30px auto 0;
+    margin-top: 40px;
     height:30px;
     text-decoration: none;
     border-style: none;
-    background-color: bisque;
+    border-radius: 5px;
+    background-color: #b5f6c0;
+
   }
   &__btn:hover {
     opacity: 0.6;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 0px
+
   }
 }
 
 .test{
-  display: flex;
+  display: inline-flex;
+  margin-left: 40px;
+}
+
+#register__western__film {
+  margin-top: 3px;
+}
+
+#register__japanese__film {
+  margin-top: 3px;
 }
