@@ -51,10 +51,6 @@
   }
 }
 
-a {
-  text-decoration: none;
-  color:black;
-}
 
 .content-wrapper {
   width: 100%;
@@ -125,18 +121,18 @@ a {
 }
 
 
-.greeting h2 {
-  text-align: center;
-}
+// .greeting h2 {
+//   text-align: center;
+// }
 
-.greeting .contents {
-  width: 100%;
-}
+// .greeting .contents {
+//   width: 100%;
+// }
 
 
-.greeting .content {
-  width: 48%;
-}
+// .greeting .content {
+//   width: 48%;
+// }
 
 .feeling {
   width: 100%;
@@ -157,37 +153,35 @@ a {
 
 
 // 感情アイコン
-.work h2 {
+.feel h2 {
   margin-bottom: 30px;
   font-size: 30px;
-
 }
 
-.work ul {
+
+.feel ul {
   display: flex;
   justify-content: space-between;
   width: 1400px;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
-.work ul li {
+.feel ul li {
   width: 400px;
 }
 
-work ul li {
-  width: 400px;
-}
 
-.work ul li figure {
+.feel ul li figure {
   margin: 0;
 }
 
-.work ul li figure img {
+.feel ul li figure img {
   height: 300px;
   width: 300px;
 }
 
-.work ul li figure img:hover {
+.feel ul li figure img:hover {
   opacity: 0.6;
   cursor: pointer;
   box-shadow: 5px 5px 10px 0px
@@ -195,10 +189,11 @@ work ul li {
 
 
 
-.work h3 {
+.feel h3 {
   display: inline-block;
   width: 300px;
   text-align: center;
+  color: black;
 
 }
 

@@ -1,3 +1,35 @@
+.device-wrapper {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-image: url(https://tk.ismcdn.jp/mwimgs/f/f/1140/img_ffcbfe499c4797118279a648e0fc0aca554472.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.device-wrapper h2 {
+  padding-top: 120px;
+  font-size: 50px;
+  font-weight: bolder;
+  color: white;
+}
+
+.field {
+  margin-top: 30px;
+}
+
+.field label {
+  color: white;
+  font-size: 30px;
+}
+#user_email {
+  width: 30vw;
+}
+
+.actions {
+  margin-top: 30px;
+}
+
 .devise-title {
   margin-top: 0;
   padding-top: 60px;
@@ -13,7 +45,7 @@
   background-color: #FCA2A2;
   color: #fff;
   padding: 5px 5px;
-  margin: 10px 0;
+  margin: 30px 0 20px 0;
   border-radius: 3px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
 }
