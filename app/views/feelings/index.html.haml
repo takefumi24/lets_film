@@ -2,17 +2,14 @@
   .header__nav
     %h1 Filppy
     .header__nav__left
-      %ul
+      %ul.header__nav__left__menu
         %li
           %a{:href => "#"} Home
         %li
-        = link_to films_path do
-          Movies
-
-        -# %li
-        -#   =link_to "Post", "/films/#{}/reviews/new"
+          = link_to "投稿映画一覧",films_path
         %li
-          %a{:href => "#"}Log in
+          = link_to "映画投稿",new_film_path
+
         %li
           %a{:href => "#"}
     .header__nav__right
@@ -22,8 +19,8 @@
         %li
           %a{:href => "#"} 編集
     .header__nav__right
-      = link_to destroy_user_session_path, method: "delete" do
-        ログアウト
+      = link_to "ログアウト",destroy_user_session_path, method: "delete"
+
 
 
 
@@ -34,41 +31,38 @@
   %img{:alt => "映画画像", :src => "https://cdn.pixabay.com/photo/2017/07/13/23/11/cinema-2502213_1280.jpg"}/
 
 %section.greeting
-  .content-wrapper
-    .explains
-      .expain
-        %h2 Filpyとは
-        %p
-          本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-          %br/
-          本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-          %br/
-          本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-          %br/
-          本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+  .container
+    .animate-title.inview
+      %span.char F
+      %span.char i
+      %span.char l
+      %span.char p
+      %span.char p
+      %span.char y
+    -# %button{:onclick => "document.querySelector('.animate-title').classList.toggle('inview');"} Animation
+
+
 
 
 %section.work
   %h2 Feeling
   %ul
     %li
-      %a{:href => "/films?feeling_id=3"}
+      %a{:href => "/films?feeling_id=1"}
         %figure
-          %img{:src => "https://image.shutterstock.com/image-photo/eye-girl-tear-600w-766403896.jpg"}/
+          %img{:src => "https://cdn.pixabay.com/photo/2016/04/24/05/52/heart-1348868_1280.png"}/
         %h3.feel
-          感動したい
+          恋したい
     %li
       %a{:href => "/films?feeling_id=2"}
         %figure
           %img{:src => "https://image.shutterstock.com/z/stock-vector-emoticon-laughing-and-wiping-tears-away-while-pointing-at-something-or-someone-with-his-other-hand-564985714.jpg"}/
-        %h3 　　　　　　　　笑いたい
+        %h3 笑いたい
     %li
-      %a{:href => "/films?feeling_id=1"}
+      %a{:href => "/films?feeling_id=3"}
         %figure
-          %img{:src => "https://cdn.pixabay.com/photo/2016/04/24/05/52/heart-1348868_1280.png"}/
-        %h3 恋したい
-
-
+          %img{:src => "https://image.shutterstock.com/image-photo/eye-girl-tear-600w-766403896.jpg"}/
+        %h3 感動したい
 
 
 
