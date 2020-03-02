@@ -5,9 +5,19 @@ class FilmsController < ApplicationController
     # @films = Film.all
     id = params[:feeling_id]
     # @films = Film.where(feeling_id:id)
-    return @films = Film.all unless id
-    @films = Feeling.find(id).films
-
+    # @jfilms = Film.where(text: "邦画")
+    # @wfilms = Film.where(text:"洋画")
+    # return @films = Film.all unless id
+    # @j_films = @films.where(text:"邦画")
+    # @w_films = @films.where(text:"洋画")
+    if id == nil
+      @j_films = Film.where(text: "邦画")
+      @w_films = Film.where(text:"洋画")
+    else
+      @films = Feeling.find(id).films
+      @j_films = @films.where(text:"邦画")
+      @w_films = @films.where(text:"洋画")
+    end
   end
 
   def new
