@@ -8,7 +8,7 @@
       %h1.japanese__films__write
         邦画
         .japanese__films__poster
-          - @films.each do |film|
+          - @j_films.each do |film|
             %ul.japanese__films__poster__list
               %li.japanese__films__poster__list__image
                 =link_to film_path(film), class: "image" do
@@ -23,12 +23,11 @@
     .western__films
       %h1.western__films__write
         洋画
-      .western__films__poster
-        %ul.western__films__poster__list
-          %li.jwestern__films__poster-list__image
-            %a{:href => "#"}
-              %img{:alt => "映画画像", :src => "https://i.pinimg.com/originals/5d/84/65/5d846579f41651ac1b8203cba7bddea5.jpg"}/
-              %img{:alt => "映画画像", :src => "https://images-na.ssl-images-amazon.com/images/I/51Xd3VhtCZL._AC_.jpg"}/
-
-      .western__films__title
-        %h2.western__films__title__name
+        .western__films__poster
+          - @w_films.each do |film|
+            %ul.western__films__poster__list
+              %li.western__films__poster__list__image
+                =link_to film_path(film), class: "image" do
+                  = image_tag film.image
+              %li.western__films__title
+                = film.title

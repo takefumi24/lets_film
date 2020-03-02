@@ -49,6 +49,43 @@ a {
       }
     }
   }
+  .western {
+    width: 100%;
+    height: 40vh;
+    margin-top: 25vh;
+    &__films {
+      display: flex;
+      height:380px;
+      &__write {
+        font-size: 50px;
+        // line-height: 350px;
+        // display: inline-block;
+      }
+      &__poster {
+        display: flex;
+        &
+          &__image {
+            display: flex;
+          }
+      }
+
+      &__poster img{
+        object-fit: cover;
+        margin-left: 50px;
+        width: 300px;
+        &:hover {
+          opacity: .7;
+        }
+      }
+
+      &__title{
+        text-align: center;
+        font-size: 27px;
+        padding-left: 60px;
+
+      }
+    }
+  }
 
   .search-form {
   text-align: center;
@@ -74,83 +111,7 @@ a {
     border: dotted 1px #FFF;
     cursor: pointer;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .western {
-    width: 100%;
-    height: 100%;
-    margin-top: 200px;
-
-    &__films {
-      display: flex;
-      margin: 20px 0 0 20px ;
-      height:380px;
-
-      &__write {
-        font-size: 50px;
-        line-height: 350px;
-      }
-
-      &__pster {
-        display: flex;
-      }
-      &__poster img{
-        object-fit: cover;
-        margin-left: 50px;
-        width: 300px;
-      }
-
-      &__title__name{
-        font-size: 20px;
-      }
-    }
-  }
 }
-
 // filmのshowアクション
 .wrapper-show {
   height: 100%;
