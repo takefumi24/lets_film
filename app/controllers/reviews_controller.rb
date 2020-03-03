@@ -19,13 +19,17 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.create(review_params)
-    redirect_to films_path
+    film = Film.find_by(id: params[:film_id])
+    id = film.getMaxfeeling
+    film.update(feeling_id: id)
+    redirect_to root_path
   end
 
   def destroy
+    @film = Film.find(params[:film_id])
     review = Review.find(params[:id])
     review.destroy
-    redirect_to film_path
+    redirect_to film_path(@film)
   end
 
   def edit
@@ -34,9 +38,10 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @film = Film.find(params[:film_id])
     review = Review.find(params[:id])
     review.update(review_params)
-    redirect_to film_path
+    redirect_to film_path(@film)
   end
 
   private
