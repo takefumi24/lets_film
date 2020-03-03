@@ -25,6 +25,20 @@
                 = r.text
 
   .side_right
+    .review-comment
+      .review-comment__left
+        .review-comment__left__name
+          ="名前:#{@review.user.name}"
+        .review-comment__left__contents
+          .review-comment__left__contents__text
+            = @review.text
+          .review-comment__left__contents__kind
+            ="感情:#{@review.feeling.kind}"
+      .review-comment__right
+        .review-comment__right__edit
+          = link_to "編集する",edit_film_review_path(@film, @review)
+        .review-comment__right__destroy
+          = link_to "削除する",film_review_path(@film,@review), method: :delete
     .comment-wrapper
       %p.comment-summary コメント一覧
       .comment-content

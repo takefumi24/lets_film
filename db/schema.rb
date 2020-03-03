@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_01_132136) do
+ActiveRecord::Schema.define(version: 2020_03_02_091553) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "text"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2020_03_01_132136) do
     t.datetime "updated_at", null: false
     t.text "image"
     t.integer "many_feeling_id"
+    t.integer "feeling_id"
     t.index ["review_id"], name: "index_films_on_review_id"
     t.index ["user_id"], name: "index_films_on_user_id"
   end

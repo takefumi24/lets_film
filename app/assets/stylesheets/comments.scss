@@ -1,11 +1,69 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.side_right {
+
+}
+
+.review-comment {
+  display: flex;
+  &__left {
+
+    &__name {
+
+    }
+    &__contents {
+      display: flex;
+      width: 400px;
+      &__text {
+
+      }
+      &__kind {
+        padding-top: 30px;
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    padding-left: 100px;
+    &__edit {
+      padding-right: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .comment-wrapper {
     width: 100%;
     .comment-summary {
       margin: 30px 0 0;
       margin-bottom: 0;
+      font-size: 20px;
     }
 
     .comment-content {
