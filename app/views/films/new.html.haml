@@ -3,12 +3,12 @@
     %h.register__form__name 新規映画の登録
     = form_with model: @film, class: "form__register", local: true do |form|
       .form__register__row
-        .test
-          %input#register__western__film{:name => "film[text]", :type => "radio", :class => "form__register__row__radio", :value => "洋画"}/
-          = form.label :洋画, class: "form__register__row__radio"
-        .test
-          %input#register__japanese__film{:name => "film[text]", :type => "radio", :class => "form__register__row__radio",:value => "邦画"}/
-          = form.label :邦画, class: "form__register__row__radio"
+        .form__register__row__form
+          %input#register__western__film{:name => "film[text]", :type => "radio", :class => "form__register__row__form__radio", :value => "洋画"}/
+          = form.label :洋画, class: "form__register__row__form__radio"
+        .form__register__row__form
+          %input#register__japanese__film{:name => "film[text]", :type => "radio", :class => "form__register__row__form__radio",:value => "邦画"}/
+          = form.label :邦画, class: "form__register__row__form__radio"
         = form.text_area :title, placeholder: :映画タイトル, class: :form__register__row__text
         = form.text_area :image, placeholder: :映画img, class: :form__register__row__image
         = form.submit '登録する', class: :form__register__row__btn

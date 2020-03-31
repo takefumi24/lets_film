@@ -1,14 +1,14 @@
 .wrapper-show
   .side_left
     .films__show-header
-      .films__show-header__edit
-        = link_to "編集する"
-      .films__show-header__destroy
-        = link_to "削除する"
+      -# .films__show-header__edit
+      -#   = link_to "編集する"
+      -# .films__show-header__destroy
+      -#   = link_to "削除する"
 
     .films__poster
       .films__poster__title
-        %img.films__poster__title{:src => @film.image}
+        %img.films__poster__title{src:@film.image}
       %h.films__poster__title
 
     .review
@@ -36,9 +36,9 @@
             ="感情:#{@review.feeling.kind}"
       .review-comment__right
         .review-comment__right__edit
-          = link_to "編集する",edit_film_review_path(@film, @review)
+          = button_to "編集する",edit_film_review_path(@film, @review), method: :get, class: 'review-comment__right__edit__review'
         .review-comment__right__destroy
-          = link_to "削除する",film_review_path(@film,@review), method: :delete
+          = button_to "削除する",film_review_path(@film,@review), method: :delete, class: 'review-comment__right__destroy__review'
     .comment-wrapper
       %p.comment-summary コメント一覧
       .comment-content
