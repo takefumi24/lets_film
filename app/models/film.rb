@@ -2,7 +2,6 @@ class Film < ApplicationRecord
 
   has_many :reviews
   belongs_to :user
-  # has_many :feelings, through: :film_feelings
   belongs_to :feeling
 
   def self.search(search)
