@@ -1,31 +1,5 @@
-.header
-  .header__nav
-    %h1 Filppy
-    .header__nav__left
-      %ul.header__nav__left__menu
-        %li
-          %a{:href => "#"} Home
-        %li
-          = link_to "投稿映画一覧",films_path
-        %li
-          = link_to "映画投稿",new_film_path
+= render 'shared/header'
 
-        %li
-          %a{:href => "#"}
-    .header__nav__right
-      %ul
-        %li
-          %a{:href => "#"} name
-        %li
-          %a{:href => "#"} 編集
-    .header__nav__right
-      = link_to "ログアウト",destroy_user_session_path, method: "delete"
-
-
-
-
-.mainvisual
-  %img{:alt => "映画画像", :src => "https://cdn.pixabay.com/photo/2017/07/13/23/11/cinema-2502213_1280.jpg"}
 
 %section.greeting
   .container
@@ -36,10 +10,6 @@
       %span.char p
       %span.char p
       %span.char y
-    -# %button{:onclick => "document.querySelector('.animate-title').classList.toggle('inview');"} Animation
-
-
-
 
 %section.feel
   %h2 Feeling
@@ -78,4 +48,4 @@
           %img{:src => "https://cdn.pixabay.com/photo/2016/01/19/17/45/hiker-1149877__480.jpg"}/
         %h3 冒険したい
 .copylight
-  %p ©️ XXCo., Ltd. All Rights Reserved.
+  %p ©️ 2020 ohba

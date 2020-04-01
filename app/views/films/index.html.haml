@@ -1,3 +1,5 @@
+= render 'shared/header'
+
 .films-wrapper
   .films-header
     = form_with(url: films_searches_path, local: true, method: :get, class: "search-form") do |form|
@@ -15,9 +17,6 @@
                   = image_tag film.image
               %li.japanese__films__title
                 = film.title
-        -# .japanese__films__title
-        -#   %h2.japanese__films__title__name
-        -#     ただ君を愛している
 
   .western
     .western__films

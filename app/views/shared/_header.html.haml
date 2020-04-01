@@ -1,0 +1,16 @@
+.header
+  .header__nav
+    %h1 Filppy
+    .header__nav__left
+      %ul.header__nav__left__menu
+        %li
+          = link_to "Home",root_path
+        %li
+          = link_to "投稿映画一覧",films_path
+        %li
+          = link_to "映画投稿",new_film_path
+
+        %li
+          %a{:href => "#"}
+    .header__nav__right
+      = link_to "ログアウト",destroy_user_session_path, method: "delete"
