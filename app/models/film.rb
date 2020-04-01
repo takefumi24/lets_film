@@ -1,8 +1,8 @@
 class Film < ApplicationRecord
 
   has_many :reviews
-  belongs_to :user
-  belongs_to :feeling
+  belongs_to :user, optional: true
+  belongs_to :feeling, optional: true
 
   def self.search(search)
     return Film.all unless search
