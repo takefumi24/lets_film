@@ -19,10 +19,11 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.create(review_params)
+    @film = Film.find(params[:film_id])
     film = Film.find_by(id: params[:film_id])
     id = film.getMaxfeeling
     film.update(feeling_id: id)
-    redirect_to root_path
+    redirect_to film_path(@film)
   end
 
   def destroy
