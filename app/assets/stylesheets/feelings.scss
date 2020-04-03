@@ -69,6 +69,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: black;
+    &__right{
+      display: flex;
+    }
   }
 
   &__nav h1 {
