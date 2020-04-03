@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  # validates :feeling, :title, :text, presence: true
+  validates :text, :feeling_id, presence: true
   belongs_to :user
   belongs_to :film
   has_many :comments
