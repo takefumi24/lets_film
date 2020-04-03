@@ -13,4 +13,8 @@
         %li
           %a{:href => "#"}
     .header__nav__right
+      %ul.header__nav__right__name
+        %li
+          %name
+            = current_user.name
       = link_to "ログアウト",destroy_user_session_path, method: "delete"
