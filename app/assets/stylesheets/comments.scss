@@ -7,21 +7,22 @@
 
 .review-comment {
   display: flex;
+  width: 660px;
   &__left {
-    width: 660px;
+    width: 679px;
     &__name {
-
+      width: 400px;
     }
     &__contents {
       display: flex;
-      width: 1420px;
-      margin-top: 15px;
-      &__text {
-        width: 1420px;
+      width: 660px;
+      margin-top: 18px;
+      &__kind{
+        margin-top: 5px;
       }
-      &__kind {
-        padding-top: 60px;
-        width: 1420px;
+      &__text {
+        width: 810px;
+        overflow-wrap: break-word;
       }
     }
   }
