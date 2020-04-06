@@ -1,5 +1,5 @@
 class Film < ApplicationRecord
-
+  validates :title, :text, :image, presence: true
   has_many :reviews
   belongs_to :user, optional: true
   belongs_to :feeling, optional: true

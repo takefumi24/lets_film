@@ -1,9 +1,14 @@
 .content
   .content__title
-    新規レビューの作成
-    = form_with model: [@film ,@review], class: :form, local: true do |form|
-      .form__review
-        = form.select :feeling_id, Feeling.all.map{|f| [f.kind, f.id]}, class: :form_feeling
-      = form.text_field :film_id, placeholder: @film.title, class: :form__title, value: @film.id
-      = form.text_area :text, placeholder: :レビュー本文, class: :form__text
-      = form.submit '投稿する', class: :form__btn
+    ★新規レビューの作成★
+  = form_with model: [@film ,@review], class: :form, local: true do |form|
+    .form__title
+      = "【映画タイトル：#{@film.title}】"
+    = form.hidden_field :film_id, value: @film.id
+    .form__review
+      = form.select :feeling_id, Feeling.all.map{|f| [f.kind, f.id]}, class: :form_feeling
+    -# = form.hidden_field :film_id, value: @film.id
+    -# = form.text_field :film_id, value: @film.title, class: :form__title
+    = form.text_area :text, placeholder: :レビュー本文, class: :form__text
+    = form.submit '投稿する', class: :form__post_btn
+    = link_to "戻る", film_path(@film.id), class: :form__back_btn
