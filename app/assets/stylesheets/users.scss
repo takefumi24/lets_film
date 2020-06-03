@@ -7,6 +7,16 @@
   background-position: center;
 }
 
+.test-user {
+  border: 1px solid #0d47a1;
+  background-color: #ffffc7;
+  width: 224px;
+  font-size: 16px;
+  text-align: center;
+  color: #0d47a1;
+  margin: 20px auto;
+}
+
 .device-wrapper h2 {
   padding-top: 120px;
   font-size: 50px;
@@ -74,8 +84,8 @@
 .sign_up {
   cursor: pointer;
   display: block;
-  width: 245px;
-  height: 27px;
+  width: 250px;
+  height: 37px;
   background-color: #FCA2A2;
   color: #fff;
   padding: 5px 5px;
@@ -87,8 +97,8 @@
 }
 .login {
   display: block;
-  width: 245px;
-  height: 27px;
+  width: 250px;
+  height: 37px;
   background-color: #FCA2A2;
   color: #fff;
   padding: 5px 5px;

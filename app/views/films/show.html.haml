@@ -23,5 +23,5 @@
             %name
               = r.user.name
             %text
-              = link_to "/films/#{@film.id}/reviews/#{r.id}/comments" do
+              = link_to film_review_comments_path(@film, r) do
                 = r.text

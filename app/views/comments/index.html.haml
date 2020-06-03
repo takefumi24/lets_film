@@ -34,8 +34,10 @@
           -#   ="感情:#{@review.feeling.kind}"
       .review-comment__right
         .review-comment__right__edit
+        - if user_signed_in? && current_user.id == @review.user_id
           = button_to "編集する",edit_film_review_path(@film, @review), method: :get, class: 'review-comment__right__edit__review'
         .review-comment__right__destroy
+        - if user_signed_in? && current_user.id == @review.user_id
           = button_to "削除する",film_review_path(@film,@review), method: :delete, class: 'review-comment__right__destroy__review'
     .comment-wrapper
       %p.comment-summary コメント一覧
