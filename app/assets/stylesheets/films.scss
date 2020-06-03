@@ -1,6 +1,13 @@
 // Place all the styles related to the films controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -8,10 +15,6 @@ a {
 
 .films-wrapper{
   height: 100vh;
-  width: 100vw;
-  .films-header {
-    height: 5vh;
-  }
   .japanese {
     width: 100%;
     height: 40vh;
@@ -21,6 +24,8 @@ a {
       height:380px;
       &__write {
         font-size: 50px;
+        width: 100px;
+        height: 8vh;
         // line-height: 350px;
         // display: inline-block;
       }
@@ -43,7 +48,7 @@ a {
 
       &__title{
         text-align: center;
-        font-size: 27px;
+        font-size: 25px;
         padding-left: 60px;
 
       }
@@ -58,6 +63,9 @@ a {
       height:380px;
       &__write {
         font-size: 50px;
+        width: 100px;
+        height: 8vh;
+
         // line-height: 350px;
         // display: inline-block;
       }
@@ -114,7 +122,7 @@ a {
 }
 // filmのshowアクション
 .wrapper-show {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
 }
@@ -224,7 +232,7 @@ a {
   &__form__name {
     display: block;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     color: black;
     font-weight: bolder;
     padding-top: 90px;
